@@ -27,7 +27,7 @@ func splitOnSpace(x string) []string {
 
 func splitRune(x string) []string {
 	var result []string
-	for _, c := range x {
+	for _, c := range strings.Split(x, "") {
 		result = append(result, string(c))
 	}
 	return result
