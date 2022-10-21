@@ -1,6 +1,7 @@
 package gg
 
 import (
+	"fmt"
 	"strings"
 )
 
@@ -13,12 +14,14 @@ func splitRune(x string) []string {
 	for _, c := range strings.Split(x, "") {
 		result = append(result, string(c))
 	}
+	fmt.Println("2--", result)
 	return result
 }
 
 func wordWrap(m measureStringer, s string, width float64) []string {
 	var result []string
 	for _, line := range strings.Split(s, "\n") {
+		fmt.Println("1--", line)
 		fields := splitRune(line)
 		x := ""
 		for i := 0; i < len(fields); i++ {
@@ -39,5 +42,6 @@ func wordWrap(m measureStringer, s string, width float64) []string {
 			result = append(result, x)
 		}
 	}
+	fmt.Println("3--", result)
 	return result
 }
