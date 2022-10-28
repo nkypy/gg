@@ -8,7 +8,6 @@ import (
 	"image/jpeg"
 	_ "image/jpeg"
 	"image/png"
-	"io/ioutil"
 	"math"
 	"os"
 	"strings"
